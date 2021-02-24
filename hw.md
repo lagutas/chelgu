@@ -59,3 +59,4 @@
      Загрузка процессора:  
         ilya@kali:~/Загрузки$ uptime
          20:19:45 up  1:02,  1 user,  load average: 2,06, 1,88, 2,22
+![Screen](screen.png)
