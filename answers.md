@@ -62,3 +62,4 @@
         vinges@vinges-virtual-machine:~$ uptime
         10:30:47 up 47 min,  1 user,  load average: 0,06, 0,24, 0,34
         ```
+![Screenshot](img.png)
