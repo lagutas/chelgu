@@ -36,7 +36,7 @@
 
 Задача 1:
 
-	```#!/bin/bash
+	#!/bin/bash
 	a=$1
 	b=$2
 	c=$3
@@ -55,7 +55,7 @@
 	   done
 	   result+="$d\n"
 	done
-	printf "$result"```
+	printf "$result"
 
 Задача 2:
 
@@ -68,9 +68,9 @@
 	Разделить панель по горизонтали: ctrl+b " 
 
 	Поддержка мыши: добавить в файл(если нет, то создать) ~/.tmux.conf следующие строки
-	```set-option -g -q mouse on
+	set-option -g -q mouse on
 	bind-key -T root WheelUpPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; copy-mode -e; send-keys -M"
-	bind-key -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"```
+	bind-key -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"
 
 	Изменить размер панели: ctrl+b ctrl+arrow
 
