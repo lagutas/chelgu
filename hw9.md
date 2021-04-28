@@ -26,12 +26,14 @@
 ![screen](4.png)
 ## Поверх raid массива развернуть lvm
 
-```sudo pvcreate /dev/md0
+```
+sudo pvcreate /dev/md0
 sudo vgcreate test /dev/md0
 sudo lvcreate -n test -L1G test
 ```
 ## Поверх raid массива развернуть lvm
-```sudo mkfs.ext4 -L test /dev/test/test
+```
+sudo mkfs.ext4 -L test /dev/test/test
 sudo mkdir /mnt/test
 sudo mount /dev/test/test /mnt/test
 ```
@@ -39,7 +41,9 @@ sudo mount /dev/test/test /mnt/test
 ![screen](5.png)
 ![screen](6.png)
 ## Расширить размер раздела за счет неиспользуемого пространтсва в raid массиве
-```sudo pvresize /dev/md0
+```
+sudo pvresize /dev/md0
 sudo lvextend -l +100%FREE /dev/mapper/test-test
-sudo resize2fs /dev/mapper/test-test```
+sudo resize2fs /dev/mapper/test-test
+```
 
