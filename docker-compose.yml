@@ -1,29 +1,13 @@
 version: '3'
-
 services:
-  hw:
-    build: ./alpine
-    links:
-      - redis_bridge
-      - redis_macvlan
+  ssh_network1:
+    build: .
     networks:
-      - bridge_nw
-      - macvlan_nw
-  redis_bridge:
-    image: "redis:alpine"
-    command: redis-server --requirepass passwd
+      - ssh_network
+  ssh_network2:
+    build: .
     networks:
-      - bridge_nw
-
-  redis_macvlan:
-     image: "redis:alpine"
-     command: redis-server --requirepass passwd
-     networks:
-       - macvlan_nw
-
+      - ssh_network
 networks:
-  bridge_nw:
+  ssh_network:
     driver: bridge
-
-  macvlan_nw:
-    driver: macvlan
